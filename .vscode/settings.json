@@ -1,0 +1,13 @@
+{
+    "editor.tabSize": 4,
+    "editor.trimAutoWhitespace": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
+    "[cpp]": {
+        "editor.tabSize": 2,
+    },
+    "[c]": {
+        "editor.tabSize": 2,
+    },
+}
