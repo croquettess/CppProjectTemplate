@@ -5,9 +5,9 @@ AccessModifierOffset: -1
 AlignAfterOpenBracket: Align
 AlignArrayOfStructures: None
 AlignConsecutiveAssignments:
-  Enabled:         false
-  AcrossEmptyLines: false
-  AcrossComments:  false
+  Enabled:         true
+  AcrossEmptyLines: true
+  AcrossComments:  true
   AlignCompound:   false
   PadOperators:    false
 AlignConsecutiveBitFields:
@@ -18,7 +18,7 @@ AlignConsecutiveBitFields:
   PadOperators:    false
 AlignConsecutiveDeclarations:
   Enabled:         true
-  AcrossEmptyLines: true
+  AcrossEmptyLines: false
   AcrossComments:  true
   AlignCompound:   false
   PadOperators:    false
@@ -87,8 +87,8 @@ Cpp11BracedListStyle: true
 DeriveLineEnding: true
 DerivePointerAlignment: true
 DisableFormat:   false
-EmptyLineAfterAccessModifier: Always
-EmptyLineBeforeAccessModifier: LogicalBlock
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: Always
 ExperimentalAutoDetectBinPacking: true
 PackConstructorInitializers: NextLine
 BasedOnStyle:    ''
@@ -101,22 +101,26 @@ ForEachMacros:
   - BOOST_FOREACH
 IfMacros:
   - KJ_IF_MAYBE
-IncludeBlocks:   Preserve
+IncludeBlocks: Regroup
 IncludeCategories:
-  - Regex:           '^<ext/.*\.h>'
-    Priority:        2
-    SortPriority:    0
-    CaseSensitive:   false
-  - Regex:           '^<.*\.h>'
+  - Regex:           '^<cstdio>'
     Priority:        1
     SortPriority:    0
     CaseSensitive:   false
-  - Regex:           '^<.*'
+  - Regex:           '^<cstdlib>'
+    Priority:        1
+    SortPriority:    1
+    CaseSensitive:   false
+  - Regex:           '^<.*\.h(pp)?$'
     Priority:        2
     SortPriority:    0
     CaseSensitive:   false
-  - Regex:           '.*'
+  - Regex:           '^<.*'
     Priority:        3
+    SortPriority:    0
+    CaseSensitive:   false
+  - Regex:           '^".*"'
+    Priority:        4
     SortPriority:    0
     CaseSensitive:   false
 IncludeIsMainRegex: '([-_](test|unittest))?$'
