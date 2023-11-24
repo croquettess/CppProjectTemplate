@@ -18,7 +18,7 @@ if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
     set(CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/app"
         CACHE PATH "${CMAKE_SOURCE_DIR}/app" FORCE)
 endif()
-message("install: ${CMAKE_INSTALL_PREFIX}")
+message(STATUS "install: ${CMAKE_INSTALL_PREFIX}")
 
 
 ################################################################################
