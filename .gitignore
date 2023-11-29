@@ -31,8 +31,8 @@
 *.out
 *.app
 
-# app/bin/*
-# app/lib/*
-# app/logs/*
-# build/*
-# submodules/*
+app/bin/*
+app/lib/*
+app/logs/*
+build/*
+submodules/*
