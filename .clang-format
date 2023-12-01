@@ -103,24 +103,20 @@ IfMacros:
   - KJ_IF_MAYBE
 IncludeBlocks: Regroup
 IncludeCategories:
-  - Regex:           '^<cstdio>'
+  - Regex:           '^<[^.>]*>$'
     Priority:        1
     SortPriority:    0
     CaseSensitive:   false
-  - Regex:           '^<cstdlib>'
+  - Regex:           '*boost/*'
     Priority:        1
     SortPriority:    1
     CaseSensitive:   false
-  - Regex:           '^<.*\.h(pp)?$'
+  - Regex:           '<.*\.h(pp)'
     Priority:        2
     SortPriority:    0
     CaseSensitive:   false
-  - Regex:           '^<.*'
+  - Regex:           '".*\.h(pp)'
     Priority:        3
-    SortPriority:    0
-    CaseSensitive:   false
-  - Regex:           '^".*"'
-    Priority:        4
     SortPriority:    0
     CaseSensitive:   false
 IncludeIsMainRegex: '([-_](test|unittest))?$'
