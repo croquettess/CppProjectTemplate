@@ -1,4 +1,4 @@
 ```shell
-cmake -Bbuild -GNinja -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
-ninja -Cbuild install -j4
+cmake -Bbuild -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++
+make -Cbuild -B install -j8
 ```
