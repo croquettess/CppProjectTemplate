@@ -4,7 +4,7 @@ set(TARGET hello)
 aux_source_directory(. SRCS_DIR)
 
 add_executable(
-    ${TARGET} 
+    ${TARGET}
     ${SRCS_DIR}
 )
 
@@ -12,6 +12,9 @@ add_executable(
 #     ${TARGET}
 
 # )
+target_link_options(${TARGET} PRIVATE
+                    ${libc++}
+)
 
 install(
     TARGETS ${TARGET}
