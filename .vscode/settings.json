@@ -57,6 +57,35 @@
         "--compile-commands-dir=build"
     ],
 
+    "doxdocgen.file.fileOrder": [
+        "file",
+        "author",
+        "date",
+        "empty",
+        // "version",
+        "brief",
+        "empty"
+        // "copyright",
+        // "empty",
+    ],
+    "doxdocgen.file.fileTemplate": "@file {name}",
+    "doxdocgen.generic.authorName": "croquettess",
+    "doxdocgen.generic.authorTag": "@author {author}",
+    "doxdocgen.generic.briefTemplate": "@brief {text}",
+    "doxdocgen.generic.dateFormat": "YYYY-MM-DD",
+    "doxdocgen.generic.dateTemplate": "@date {date}",
+
+    "doxdocgen.generic.order": [
+        "brief",
+        "empty",
+        "tparam",
+        "param",
+        "return",
+    ],
+
+    "doxdocgen.generic.paramTemplate": "@param {param} ",
+    "doxdocgen.generic.returnTemplate": "@return {type} ",
+
     "vim.easymotion": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
