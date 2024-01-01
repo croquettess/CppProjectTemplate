@@ -12,9 +12,6 @@ add_executable(
 #     ${TARGET}
 
 # )
-target_link_options(${TARGET} PRIVATE
-                    ${libc++}
-)
 
 install(
     TARGETS ${TARGET}

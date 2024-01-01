@@ -12,24 +12,18 @@ include(cmake/std.cmake)
 ################################################################################
 # execute_process(COMMAND git submodule)
 
+################################################################################
+# compile_options
+################################################################################
 add_compile_options( -Wall)
 add_compile_options( -g)
 add_compile_options( -Wextra)
 add_compile_options( -std=c++20)
-add_compile_options( -nostdinc++)
-add_compile_options( -I/opt/clang+llvm-17.0.1-aarch64-linux-gnu/include/c++/v1)
-add_compile_options( -I/opt/clang+llvm-17.0.1-aarch64-linux-gnu/include/aarch64-unknown-linux-gnu/c++/v1)
 
 ################################################################################
-# libc++
+# build dir
 ################################################################################
-set(libc++
-    -L/opt/clang+llvm-17.0.1-aarch64-linux-gnu/lib/aarch64-unknown-linux-gnu
-    -stdlib=libc++
-)
-
 add_subdirectory(src)
-
 add_subdirectory(tools)
 
 ################################################################################
